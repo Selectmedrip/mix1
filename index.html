@@ -32,8 +32,8 @@
         btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
             if (!tg.MainButton.isVisible){ //если кнопка непоказана 
                 tg.MainButton.show(); //показываем кнопку
-                if(tg.MainButton.Clicked){ window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне 
-                    
+                if(tg.MainButton.onClick){ window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне 
+
                 }
             }
         });

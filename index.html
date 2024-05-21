@@ -27,16 +27,8 @@
         tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
         tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
         tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+        tg.MainButton.onClick = window.open('https://t.me/teleb0t1k_bot/mix2', '_blank');
 
-
-        btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-            if (!tg.MainButton.isVisible){ //если кнопка непоказана 
-                tg.MainButton.show(); //показываем кнопку
-                if(tg.MainButton.onClick){ window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне 
-
-                }
-            }
-        });
 
     </script>
 </body>

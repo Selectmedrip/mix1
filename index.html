@@ -14,8 +14,6 @@
     }());
     </script>
 
-    <button id="btn" class="button">Show Main Button</button> <!--Кнопка, чтобы показать основную кнопку-->
-
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
@@ -27,9 +25,12 @@
         tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
         tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
         tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
-        tg.MainButton.onClick = window.open('https://t.me/teleb0t1k_bot/mix2', '_blank');
 
+        tg.MainButton.show(); //показываем кнопку
 
+        tg.MainButton.addEventListener('click', function(){ //вешаем событие на нажатие кнопки tg.MainButton
+            window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне 
+        });
     </script>
 </body>
 </html>

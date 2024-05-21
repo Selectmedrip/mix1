@@ -30,12 +30,12 @@
 
 
         btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-            if (tg.MainButton.isVisible){ //если кнопка показана 
-                tg.MainButton.show(); //скрываем кнопку 
+            if (!tg.MainButton.isVisible){ //если кнопка непоказана 
+                tg.MainButton.show(); //показываем кнопку
+                window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне
             }
             else{ //иначе
-                tg.MainButton.show(); //показываем 
-                window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне
+                tg.MainButton.hide(); //показываем 
             }
         });
 

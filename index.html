@@ -16,21 +16,25 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+        
+        let tg = window.Telegram.WebApp; // получаем объект webapp телеграма 
 
         tg.expand(); //расширяем на все окно  
 
-        tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
-        tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
-        tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
-        tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-        tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+        tg.MainButton.text = "Новый текст"; // изменяем текст кнопки
+        tg.MainButton.color = "#143F6B"; // изменяем цвет текста кнопки
+        tg.MainButton.textColor = "#F55353"; // изменяем цвет подложки кнопки
 
-        tg.MainButton.show(); //показываем кнопку
-
-        tg.MainButton.onClick = function(){ //вешаем событие на нажатие кнопки tg.MainButton
-            window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); //открываем ссылку в новом окне 
+        tg.MainButton.setText("Новый текст"); // метод для задания текста
+        tg.MainButton.onClick = function(){ // вешаем событие на нажатие кнопки tg.MainButton
+            window.open('https://t.me/teleb0t1k_bot/mix2', '_blank'); // открываем ссылку в новом окне 
         };
+
+        tg.MainButton.show(); // показываем кнопку
+        tg.MainButton.enable(); // делаем кнопку активной
+
+        tg.MainButton.setParams({"color": "#143F6B"}); // задаем параметры в виде объекта
+
     </script>
 </body>
 </html>
